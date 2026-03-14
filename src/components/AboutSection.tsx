@@ -84,7 +84,7 @@ const AboutSection = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
             variants={staggerContainer}
-            className="grid grid-cols-3 gap-6 mb-12 py-8 border-t border-b border-border"
+            className="grid grid-cols-2 sm:grid-cols-3 gap-6 mb-12 py-8 border-t border-b border-border"
           >
             {stats.map((stat) => (
               <motion.div key={stat.label} variants={reveal} transition={{ duration: 0.5 }}>

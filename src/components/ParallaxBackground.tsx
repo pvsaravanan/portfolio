@@ -23,11 +23,11 @@ const ParallaxBackground = () => {
       {/* Large gradient orbs */}
       <motion.div
         style={{ y: y1, opacity }}
-        className="absolute -top-32 -right-32 w-[800px] h-[800px] rounded-full bg-primary/[0.05] blur-[120px]"
+        className="absolute -top-32 -right-32 w-[400px] h-[400px] md:w-[800px] md:h-[800px] rounded-full bg-primary/[0.05] blur-[80px] md:blur-[120px]"
       />
       <motion.div
         style={{ y: y2, opacity }}
-        className="absolute top-1/2 -left-32 w-[600px] h-[600px] rounded-full bg-primary/[0.03] blur-[100px]"
+        className="absolute top-1/2 -left-32 w-[300px] h-[300px] md:w-[600px] md:h-[600px] rounded-full bg-primary/[0.03] blur-[60px] md:blur-[100px]"
       />
 
       {/* Grid dots - keep them as accents */}

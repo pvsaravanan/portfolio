@@ -51,11 +51,11 @@ const HeroSection = () => {
           <div className="flex-1">
             <motion.h1
               variants={item}
-              className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[0.9] tracking-tight max-w-5xl"
+              className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold leading-[0.9] tracking-tight max-w-5xl"
             >
               I'm <span className="text-gradient">Saravanan P V.</span>
               <br />
-              <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl opacity-80">
+              <span className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl opacity-80">
                 Crafting the future of AI.
               </span>
             </motion.h1>
