@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light mode */
+    --background: 30 20% 97%;
+    --foreground: 30 10% 10%;
+
+    --card: 30 15% 93%;
+    --card-foreground: 30 10% 10%;
+
+    --popover: 30 15% 93%;
+    --popover-foreground: 30 10% 10%;
+
+    --primary: 24 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 30 10% 88%;
+    --secondary-foreground: 30 10% 10%;
+
+    --muted: 30 10% 88%;
+    --muted-foreground: 30 8% 42%;
+
+    --accent: 24 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 30 10% 82%;
+    --input: 30 10% 82%;
+    --ring: 24 100% 50%;
+
+    --radius: 0.25rem;
+
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    --sidebar-background: 30 20% 97%;
+    --sidebar-foreground: 30 10% 10%;
+    --sidebar-primary: 24 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 30 10% 88%;
+    --sidebar-accent-foreground: 30 10% 10%;
+    --sidebar-border: 30 10% 82%;
+    --sidebar-ring: 24 100% 50%;
+  }
+
+  .dark {
+    --background: 30 5% 7%;
+    --foreground: 40 20% 92%;
+
+    --card: 30 4% 11%;
+    --card-foreground: 40 20% 92%;
+
+    --popover: 30 4% 11%;
+    --popover-foreground: 40 20% 92%;
+
+    --primary: 24 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 30 4% 15%;
+    --secondary-foreground: 40 20% 92%;
+
+    --muted: 30 4% 18%;
+    --muted-foreground: 30 8% 55%;
+
+    --accent: 24 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 30 5% 18%;
+    --input: 30 5% 18%;
+    --ring: 24 100% 50%;
+
+    --sidebar-background: 30 5% 7%;
+    --sidebar-foreground: 40 20% 92%;
+    --sidebar-primary: 24 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 30 4% 15%;
+    --sidebar-accent-foreground: 40 20% 92%;
+    --sidebar-border: 30 5% 18%;
+    --sidebar-ring: 24 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    cursor: none;
+    transition: background-color 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  *, *::before, *::after {
+    transition-property: background-color, border-color, color, fill, stroke, box-shadow;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  a, button, [role='button'], input, textarea, select {
+    cursor: none;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(24 100% 50%), hsl(35 100% 60%));
+  }
+
+  .border-glow {
+    box-shadow: 0 0 20px -5px hsl(24 100% 50% / 0.15);
+  }
+
+  .bg-grid {
+    background-size: 60px 60px;
+    background-image:
+      linear-gradient(to right, hsl(var(--primary) / 0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--primary) / 0.08) 1px, transparent 1px);
+  }
+
+  .bg-grid-small {
+    background-size: 15px 15px;
+    background-image:
+      linear-gradient(to right, hsl(var(--primary) / 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--primary) / 0.03) 1px, transparent 1px);
+  }
+}
