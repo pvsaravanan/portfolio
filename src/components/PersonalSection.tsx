@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import GithubCalendar from "./GithubCalendar";
 
 const reveal = {
   hidden: { opacity: 0, y: 40, filter: "blur(6px)" },
@@ -70,7 +71,7 @@ const PersonalSection = () => {
             </div>
           </motion.div>
 
-          {/* Activity Visualizer (Snake) */}
+          {/* GitHub Activity Wrapper */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -79,15 +80,9 @@ const PersonalSection = () => {
           >
             <h3 className="font-display font-bold text-lg flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-primary" />
-              Developer Activity
+              GitHub Activity
             </h3>
-            <div className="p-6 border border-border rounded-lg bg-black/20 backdrop-blur-sm">
-              <img 
-                src="https://raw.githubusercontent.com/pvsaravanan/pvsaravanan/output/snake.svg" 
-                alt="Snake animation" 
-                className="w-full h-auto"
-              />
-            </div>
+            <GithubCalendar />
           </motion.div>
         </div>
       </div>
